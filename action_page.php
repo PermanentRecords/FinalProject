@@ -10,6 +10,6 @@ $formcontent = "From: $name \n Phone: $phone \n Call Back: $call \n Website: $we
 $recipient = "andrew@permanentrecords.ca";
 $subject = "School Project Query";
 $mailheader = "From: $email \r\n";
-mail($recipient, $subject, $formcontent, $mailheader) or die("Error!");
+mail($recipient, $subject, $formcontent, $mailheader) or die("There's a problem!");
 echo "Thank You!";
 ?>
