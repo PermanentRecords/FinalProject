@@ -1,96 +1,83 @@
 <!DOCTYPE html>
-
+<title>Contact Page</title>
 <html>
+<head>
+<img src="images/title.png" alt="Andrew D Nicholls">
+<style>
+body {
+  background-image: url(images/background.png);
+  background-repeat: repeat;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666;
+}
 
-  <head>
-    <title>Contact Page</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
+li {
+  float: left;
+}
 
-      ul {
-        list-style-type: none;
-        margin: 20px 0;
-        padding: 0;
-        overflow: hidden;
-        background-color: #666;
-      }
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: Trebuchet MS;
+  padding: 14px 16px;
+  text-decoration: none;
+}
 
-      li {
-        float: left;
-      }
+li a:hover {
+  background-color: rgb(255,0,0);
+}
+</style>
+ <link href="html/styling.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
 
-      li a {
-        display: block;
-        color: white;
-        text-align: center;
-        font-family: Trebuchet MS;
-        padding: 14px 16px;
-        text-decoration: none;
-      }
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="andrew.html">Andrew</a></li>
+  <li><a href="instruments.html">Instruments</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
 
-      li a:hover {
-        background-color: rgb(255,0,0);
-      }
 
-      form div {
-        margin-bottom: 20px;
-      }
 
-      form input, form select, form textarea {
-        padding: 6px 8px;
-        border-radius: 3px;
-        border: 1px solid #ddd;
-        width: 300px;
-      }
+<form action="action_page.php" method="POST">
+<p>Name</p> <input type="text" name="name">
+<p>Email</p> <input type="text" name="email">
+<p>Phone</p> <input type="text" name="phone">
 
-      form button {
-        padding: 10px 12px;
-        border: none;
-        background-color: #666;
-        color: #fff;
-        font-family: Trebuchet MS;
-        font-size: 16px;
-      }
-      
-      form button:hover {
-        background-color: #666;
-        background-color: #f00;
-      }
+<p>Would You Prefer a Phone Call?</p>
+Yes:<input type="checkbox" value="Yes" name="call"><br />
+No: <input type="checkbox" value="No" name="call"><br />
 
-      form input::placeholder, 
-      form textarea::placeholder { 
-        color: #aaa;
-      }
-    </style>
-  </head>
+<p>Your Website</p> <input type="text" name="website">
 
-  <body>
+<p>Priority</p> 
+<select name="priority" size="1">
+<option value="Low">Low</option>
+<option value="Normal">Normal</option>
+<option value="High">High</option>
+<option value="Emergency">Rushed</option>
+</select>
+<br />
 
-    <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="andrew.html">Me</a></li>
-      <li><a href="instruments.html">Instruments</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+<p>Type of Query</p>
+<select name="type" size="1">
+<option value="more">More Information</option>
+<option value="advice">Audio Advice</option>
+<option value="review">Request a Gear Review</option>
+<option value="feedback">Send me Feedback</option>
+</select>
+<br />
 
-    <div class="container">
-      <form action="action_page.php" method="POST">
-        <div><input type="text" id="fname" name="firstname" placeholder="First Name"></div>
-        <div><input type="text" id="lname" name="lastname" placeholder="Last Name" required></div>
-        <div><input type="text" id="mail" name="email" placeholder="Email" required></div>
-        <div><input type="text" id="phone" name="phonenum" placeholder="Phone Number XXX-XXX-XXXX"></div>
-        <div><select id="country" name="country">
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-          <option value="other">Other</option>
-          <option value="secret">Prefer Not To Say</option>
-        </select></div>
-        <div><textarea id="message" name="message" placeholder="Your Message"  required style="height:200px"></textarea></div>
-        <div><button type="submit">Send Email</div>
-      </form>
-    </div>
+<p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+<input type="submit" value="Send"><input type="reset" value="Clear">
+</form>
 
-  </body>
+
 </html>

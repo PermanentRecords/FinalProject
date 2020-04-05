@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Contact Page</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style-type: none;
+        margin: 20px 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #666;
+      }
+
+      li {
+        float: left;
+      }
+
+      li a {
+        display: block;
+        color: white;
+        text-align: center;
+        font-family: Trebuchet MS;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      li a:hover {
+        background-color: rgb(255,0,0);
+      }
+
+      form div {
+        margin-bottom: 20px;
+      }
+
+      form input, form select, form textarea {
+        padding: 6px 8px;
+        border-radius: 3px;
+        border: 1px solid #ddd;
+        width: 300px;
+      }
+
+      form button {
+        padding: 10px 12px;
+        border: none;
+        background-color: #666;
+        color: #fff;
+        font-family: Trebuchet MS;
+        font-size: 16px;
+      }
+      
+      form button:hover {
+        background-color: #666;
+        background-color: #f00;
+      }
+
+      form input::placeholder, 
+      form textarea::placeholder { 
+        color: #aaa;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="andrew.html">Me</a></li>
+      <li><a href="instruments.html">Instruments</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="container">
+      <form action="action_page.php" method="POST">
+        <div><input type="text" id="fname" name="fname" placeholder="First Name"></div>
+        <div><input type="text" id="lname" name="lname" placeholder="Last Name" required></div>
+        <div><input type="text" id="email" name="email" placeholder="Email" required></div>
+        <div><input type="text" id="phone" name="phone" placeholder="Phone Number XXX-XXX-XXXX"></div>
+        <div><select id="country" name="country">
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+          <option value="other">Other</option>
+          <option value="secret">Prefer Not To Say</option>
+        </select></div>
+        <div><textarea id="message" name="message" placeholder="Your Message"  required style="height:200px"></textarea></div>
+        <div><button type="submit">Send Email</div>
+      </form>
+    </div>
+
+  </body>
+</html>
