@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<title>Contact Page</title>
+<html>
+<head>
+<img src="images/title.png" alt="Andrew D Nicholls">
+<style>
+body {
+  background-image: url(images/background.png);
+  background-repeat: repeat;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #666;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  font-family: Trebuchet MS;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: rgb(255,0,0);
+}
+</style>
+ <link href="html/styling.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+
+<ul>
+  <li><a class="active" href="index.html">Home</a></li>
+  <li><a href="andrew.html">Andrew</a></li>
+  <li><a href="instruments.html">Instruments</a></li>
+  <li><a href="contact.html">Contact</a></li>
+</ul>
+
+
+
+<form action="action_page.php" method="POST">
+<p>Name</p> <input type="text" name="name">
+<p>Email</p> <input type="text" name="email">
+<p>Phone</p> <input type="text" name="phone">
+
+<p>Would You Prefer a Phone Call?</p>
+Yes:<input type="checkbox" value="Yes" name="call"><br />
+No: <input type="checkbox" value="No" name="call"><br />
+
+<p>Your Website</p> <input type="text" name="website">
+
+<p>Priority</p> 
+<select name="priority" size="1">
+<option value="Low">Low</option>
+<option value="Normal">Normal</option>
+<option value="High">High</option>
+<option value="Emergency">Rushed</option>
+</select>
+<br />
+
+<p>Type of Query</p>
+<select name="type" size="1">
+<option value="more">More Information</option>
+<option value="advice">Audio Advice</option>
+<option value="review">Request a Gear Review</option>
+<option value="feedback">Send me Feedback</option>
+</select>
+<br />
+
+<p>Message</p><textarea name="message" rows="6" cols="25"></textarea><br />
+<input type="submit" value="Send"><input type="reset" value="Clear">
+</form>
+
+
+</html>
